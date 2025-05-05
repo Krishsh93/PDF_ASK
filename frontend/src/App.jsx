@@ -3,7 +3,7 @@ import { FiUpload, FiSend } from "react-icons/fi"
 import axios from "axios"
 import "./App.css"
 import logo from "./assets/logo.png"
-import botAvatar from "./assets/image.png"
+import botAvatar from "./assets/avtar.png"
 import ReactMarkdown from 'react-markdown';
 function formatAnswer(text) {
   // Return the full text without truncation to match the design in the image

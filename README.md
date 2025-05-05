@@ -2,6 +2,24 @@
 
 An interactive PDF analysis application that allows users to upload PDF documents and ask questions about their content using AI. The application uses FastAPI for the backend, React for the frontend, and Groq's API for AI-powered question answering.
 
+## Screenshots
+
+### Desktop View
+![Desktop Interface](frontend/src/assets/ss1.png)
+
+### Mobile View
+![Mobile Interface](frontend/src/assets/image.png)
+
+## Features
+
+- PDF document upload and processing
+- AI-powered question answering about PDF content
+- Real-time chat-like interface
+- Toast notifications for system messages
+- Document management system
+- Responsive user interface
+- Mobile-first design with adaptive layout
+
 ## Project Structure
 ```
 pdf_analyser/
@@ -25,16 +43,9 @@ pdf_analyser/
 └── README.md              # Documentation
 ```
 
-## Features
+## Quick Start
 
-- PDF document upload and processing
-- AI-powered question answering about PDF content
-- Real-time chat-like interface
-- Toast notifications for system messages
-- Document management system
-- Responsive user interface
-
-## Backend Setup
+### Backend Setup
 
 1. Create a Python virtual environment:
 ```bash
@@ -58,7 +69,7 @@ GROQ_API_KEY=your_groq_api_key_here
 uvicorn app.main:app --reload --port 8000
 ```
 
-## Frontend Setup
+### Frontend Setup
 
 1. Install frontend dependencies:
 ```bash
@@ -140,6 +151,8 @@ The application will be available at `http://localhost:5173`
 - Components are organized in the `src/components` directory
 - Styles are maintained in `src/styles`
 - The application uses custom CSS for styling
+- Responsive design with mobile-first approach
+- Adaptive layout for different screen sizes
 
 ## Production Deployment
 
@@ -171,4 +184,7 @@ npm run build
 - Enhance error handling and recovery
 - Implement caching for better performance
 - Optimize vector store for larger documents
+- Add dark mode support
+- Implement file preview functionality
+- Add support for multiple languages
 ``` 
