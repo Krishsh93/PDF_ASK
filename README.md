@@ -19,6 +19,7 @@ An interactive PDF analysis application that allows users to upload PDF document
 - Document management system
 - Responsive user interface
 - Mobile-first design with adaptive layout
+- TF-IDF based document similarity search
 
 ## Project Structure
 ```
@@ -126,10 +127,13 @@ The application will be available at `http://localhost:5173`
 ### Backend
 - **FastAPI**: Provides the REST API endpoints
 - **SQLAlchemy**: Database ORM for document management
-- **LangChain**: Framework for PDF processing
+- **LangChain**: Framework for PDF processing and text chunking
 - **Groq API**: AI model for question answering
-- **TF-IDF Vectorization**: For document chunk similarity search
-- **scikit-learn**: For text vectorization and similarity calculations
+- **TF-IDF Vectorization**: 
+  - Uses scikit-learn's TfidfVectorizer for text vectorization
+  - Implements cosine similarity for document chunk matching
+  - Stores vectorized chunks for efficient retrieval
+  - Supports configurable chunk size and overlap
 
 ### Frontend
 - **React**: UI framework
@@ -146,6 +150,7 @@ The application will be available at `http://localhost:5173`
 - TF-IDF vector stores are saved in `vector_stores` directory
 - Text is split into chunks using LangChain's RecursiveCharacterTextSplitter
 - Document similarity is calculated using cosine similarity
+- Vector stores are persisted using Python's pickle format
 
 ### Frontend Development
 - Components are organized in the `src/components` directory
@@ -183,8 +188,9 @@ npm run build
 - Add support for more file formats
 - Enhance error handling and recovery
 - Implement caching for better performance
-- Optimize vector store for larger documents
+- Optimize TF-IDF vector store for larger documents
 - Add dark mode support
 - Implement file preview functionality
 - Add support for multiple languages
+- Consider implementing more advanced vector stores (e.g., FAISS, HNSW)
 ``` 
